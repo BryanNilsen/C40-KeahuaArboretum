@@ -31,10 +31,10 @@ You have met with other foresters and land managers and have decided on the anim
 
 Listed below are the different biomes, or habitats, that exist in the arboretum and how many new plants and animals that can be introduced into it.
 
-| Mountain | Grassland | River | Forest | Swamp | Coastline |
-|---|---|---|---|---|---|
-| 4 plants <br/> 6 animals | 15 plants <br/> 22 animals | 6 plants <br/> 12 animals | 32 plants <br/> 20 animals | 12 plants <br/> 8 animals | 3 plants <br/> 15 animals |
-
+| | Mountain | Grassland | River | Forest | Swamp | Coastline |
+|---|---|---|---|---|---|---|
+| **Capacity** | 4 plants <br/> 6 animals | 15 plants <br/> 22 animals | 6 plants <br/> 12 animals | 32 plants <br/> 20 animals | 12 plants <br/> 8 animals | 3 plants <br/> 15 animals |
+| **Characteristics** | High elevation | Little rainfall, <br /> No shade | Fresh water | Rainy, <br /> Shady | Stagnant fresh water | Saltwater
 
 ## Fauna
 
@@ -51,7 +51,7 @@ This is a list of animals that you and your teammates are in charge of raising, 
 | | [Rainbow Eucalyptus Tree](https://www.worldfortravel.com/rainbow-eucalyptus-trees-maui-hawaii/) | [Silversword](http://www.instanthawaii.com/cgi-bin/hi?!2iETuaiz1oOqng7Tvj11r5ATTMf910OqniaHvAb1T9n0N1iaQrdN0fvROG17ferONzrmnt0arEvkv0b8) | [Mountain Apple Tree](http://www.instanthawaii.com/cgi-bin/hi?!2iETuaiz1oOqng7Tvj1ZrlAtuaaz1iOsdivBOjd8f0rhobinnrnarboL82Cbf3frNjaOmenqdlv8) | [Blue Jade Vine](http://www.instanthawaii.com/cgi-bin/hi?!2iETuaiz1oOqng7Tvj1lr1AhTCfQ1t0Mrdvkv221alreoCmOmrnSe4efF62ZRvgOubemm40br8) |
 |---|---|---|---| --- |
 |**Location**| Forest | Grassland | Mountain | Grassland or Swamp |
-|**Sunlight**| Full | Shade | Partial | Partial |
+|**Sunlight**| Shade | Full | Partial | Partial |
 |**Seeds Produced**| 8 | 22 | 17 | 0 |
 |**Insecticide Resistance**| Low | High | High | Medium |
 
