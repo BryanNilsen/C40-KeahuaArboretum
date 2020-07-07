@@ -2,7 +2,7 @@ import sys
 sys.path.append('../')
 
 from environments.environment import Environment
-from interfaces.habitats import IStagnant
+from environments import Stagnant
 # from animals.
 
 
