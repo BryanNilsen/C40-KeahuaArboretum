@@ -1,4 +1,4 @@
-class IWalking:
+class Walking:
 
     def __init__(self, leg_count=2):
         self.leg_count = leg_count
