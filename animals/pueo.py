@@ -1,15 +1,15 @@
 from animals import Animal
-from animals import Saltwater
-from animals import Swimming
+from animals import Flying
+from animals import Terrestrial
 
 
-class Ulae(Animal, Saltwater, Swimming):
+class Pueo(Animal, Terrestrial, Flying):
 
     def __init__(self):
         Animal.__init__(self, "Ulae")
-        Saltwater.__init__(self)
-        Swimming.__init__(self)
-        self.__prey = {"Mackerel", "Trout"}
+        Terrestrial.__init__(self)
+        Flying.__init__(self)
+        self.__prey = {"Rats", "Mice"}
 
     @property
     def prey(self):
@@ -22,4 +22,4 @@ class Ulae(Animal, Saltwater, Swimming):
             print(f"The 'ulae rejects the {prey}")
 
     def __str__(self):
-        return f"'Ulae ({str(self.id)[:8]})"
+        return f"Pueo ({str(self.id)[:8]})"

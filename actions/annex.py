@@ -2,7 +2,7 @@ import os
 from environments import River
 from environments import Swamp
 # from environments import Coastline
-# from environments import Grassland
+from environments import Grassland
 # from environments import Mountain
 # from environments import Forest
 
@@ -28,17 +28,17 @@ def annex_habitat(arboretum):
         arboretum.swamps.append(swamp)
     # if choice == "3":
     #     name = input("Enter a name for your Coastline: ")
-    #     coastline = Coastline()
+    #     coastline = Coastline(name)
     #     arboretum.coastlines.append(coastline)
-    # if choice == "4":
-    #     name = input("Enter a name for your Grassland: ")
-    #     grassland = Grassland()
-    #     arboretum.grasslands.append(grassland)
+    if choice == "4":
+        name = input("Enter a name for your Grassland: ")
+        grassland = Grassland(name)
+        arboretum.grasslands.append(grassland)
     # if choice == "5":
     #     name = input("Enter a name for your Mountain: ")
-    #     mountain = Mountain()
+    #     mountain = Mountain(name)
     #     arboretum.mountains.append(mountain)
     # if choice == "6":
     #     name = input("Enter a name for your Forest: ")
-    #     forest = Forest()
+    #     forest = Forest(name)
     #     arboretum.forests.append(forest)
