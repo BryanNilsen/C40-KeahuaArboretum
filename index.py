@@ -6,14 +6,20 @@ from actions.report import build_facility_report
 
 keahua = Arboretum("Keahua Arboretum", "123 Paukauila Lane")
 
+
 def build_menu():
     os.system('cls' if os.name == 'nt' else 'clear')
+    print("+-++-++-++-++-++-++-++-++-++-++-++-++-++-++-++-+")
+    print("|  K  e  h  u  a    A  r  b  o  r  e  t  u  m  |")
+    print("+-++-++-++-++-++-++-++-++-++-++-++-++-++-++-++-+")
+    print("")
     print("1. Annex Habitat")
     print("2. Release Animal into Habitat")
     print("3. Feed Animal")
     print("4. Add Plant to Habitat")
     print("5. Display Facility Report")
     print("6. Exit")
+    print("")
 
 
 def main_menu():
@@ -22,6 +28,7 @@ def main_menu():
     Arguments: None
     """
     build_menu()
+    print("Choose a KILLER option.")
     choice = input(">> ")
 
     if choice == "1":
@@ -39,8 +46,11 @@ def main_menu():
     if choice == "5":
         build_facility_report(keahua)
         pass
+    if choice == "6":
+        exit()
 
     if choice != "6":
         main_menu()
+
 
 main_menu()
