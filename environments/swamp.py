@@ -21,4 +21,4 @@ class Swamp(Environment):
         self.inhabitants.append(item)
 
     def __str__(self):
-        return f'{self.name} Swamp'
+        return f'{self.name}'

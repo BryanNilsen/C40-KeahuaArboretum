@@ -8,6 +8,9 @@ keahua = Arboretum("Keahua Arboretum", "123 Paukauila Lane")
 
 
 def build_menu():
+    '''
+    Title Menu with options list
+    '''
     os.system('cls' if os.name == 'nt' else 'clear')
     print("+-++-++-++-++-++-++-++-++-++-++-++-++-++-++-++-+")
     print("|  K  e  h  u  a    A  r  b  o  r  e  t  u  m  |")
@@ -23,8 +26,9 @@ def build_menu():
 
 
 def main_menu():
-    """Show Keahua Action Options
-
+    """
+    Show Keahua title with main menu options
+    Handle user-selected menu option
     Arguments: None
     """
     build_menu()
