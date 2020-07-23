@@ -1,37 +1,37 @@
 import os
 from animals import Aquatic
 from .environment import Environment
-from animals import RiverDolphin
 
 
 class River(Environment):
 
     def __init__(self, name):
         Environment.__init__(self, name)
+        self.animal_max = 12
+        self.plant_max = 6
 
     def animal_count(self):
         return f"This place has {len(self.animals)} animals in it"
 
     def add_animal(self, animal):
-        # animal count max 12
-        if len(self.animals) < 3:
-            try:
-                if animal.aquatic and animal.cell_type == "hypertonic":
-                    self.animals.append(animal)
-                else:
-                    raise AttributeError(
-                        "Cannot add saltwater animals to a river")
-
-            except AttributeError:
+        # if len(self.animals) < self.animal_max:
+        try:
+            if animal.aquatic and animal.cell_type == "hypertonic":
+                self.animals.append(animal)
+            else:
                 raise AttributeError(
-                    "Cannot add non-aquatic, or saltwater animals to a river")
-                input("\n\nPress any key to continue...")
-        else:
-            raise AttributeError()
-            os.system('clear')
-            print("**** That biome is not large enough ****")
-            print("****   Please choose another one    ****")
+                    "Cannot add saltwater animals to a river")
+
+        except AttributeError:
+            raise AttributeError(
+                "Cannot add non-aquatic, or saltwater animals to a river")
             input("\n\nPress any key to continue...")
+        # else:
+        #     raise AttributeError()
+        #     os.system('clear')
+        #     print("**** That biome is not large enough ****")
+        #     print("****   Please choose another one    ****")
+        #     input("\n\nPress any key to continue...")
 
     def add_plant(self, plant):
         try:

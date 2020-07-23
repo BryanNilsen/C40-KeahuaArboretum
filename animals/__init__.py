@@ -15,3 +15,4 @@ from .river_dolphin import RiverDolphin
 from .kikakapu import Kikakapu
 from .ulae import Ulae
 from .pueo import Pueo
+from .gold_dust_gecko import GoldDustDayGecko

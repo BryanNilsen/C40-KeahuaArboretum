@@ -1,5 +1,8 @@
 from animals import RiverDolphin
 from animals import Kikakapu
+from animals import Pueo
+from animals import Ulae
+from animals import GoldDustDayGecko
 # TODO import the rest of the animals here
 
 
@@ -18,8 +21,7 @@ def release_animal(arboretum):
     choice = input("Choose animal to release > ")
 
     if choice == "1":
-      # TODO animal = GoldDustDayGecko()
-        pass
+        animal = GoldDustDayGecko()
 
     if choice == "2":
         animal = RiverDolphin()
@@ -45,41 +47,26 @@ def release_animal(arboretum):
         # TODO animal = HappyFaceSpider()
         pass
 
-    # TODO some form of option counter / track environment (river, swamp, etc.) with that specific index
-    # gather all viable environments
+    # Get all biome lists
+    biomes = [arboretum.rivers, arboretum.coastlines, arboretum.swamps,
+              arboretum.grasslands, arboretum.mountains, arboretum.forests]
+
+    # Create empty options list of available biome environments
     options = []
 
-    # can refactor this to make it DRY - args (rivers, mountains) - max num?
-    for river in arboretum.rivers:
-        if len(river.animals) < 12:
-            options.append(river)
-    for swamp in arboretum.swamps:
-        if len(river.animals) < 8:
-            options.append(swamp)
-    for grassland in arboretum.grasslands:
-        if len(river.animals) < 22:
-            options.append(grassland)
-    for mountain in arboretum.mountains:
-        if len(river.animals) < 6:
-            options.append(mountain)
-    for forest in arboretum.forests:
-        if len(river.animals) < 20:
-            options.append(forest)
-    for coastline in arboretum.coastlines:
-        if len(river.animals) < 15:
-            options.append(coastline)
+    # iterate biome lists and add available environments to options list
+    for biome in biomes:
+        for environment in biome:
+            if len(environment.animals) < environment.animal_max:
+                options.append(environment)
 
+    # iterate options list to create menu options
     for index, option in enumerate(options):
         print(f'{index + 1}. {option} ({len(option.animals)} animals)')
 
-    # for index, river in enumerate(arboretum.rivers):
-    #     print(f'{index + 1}. River {river} ({len(river.animals)} animals)')
-
-    # for index, swamp in enumerate(arboretum.swamps):
-    #     print(f'{index + 1}. Swamp {swamp} ({len(swamp.animals)} animals)')
-
+    # prompt user to place animal
     print("Release the animal into which biome?")
     choice = input("> ")
 
+    # place animal in selected biome list
     options[int(choice) - 1].add_animal(animal)
-    # arboretum.rivers[int(choice) - 1].add_animal(animal)
