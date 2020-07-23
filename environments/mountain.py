@@ -1,27 +1,26 @@
-from animals import Stagnant
 from .environment import Environment
+from animals import Flying
 
 
-class Swamp(Environment):
+class Mountain(Environment):
 
     def __init__(self, name):
         Environment.__init__(self, name)
-        self.animal_max = 8
-        self.plant_max = 12
-        self.current_speed = 0
+        self.animal_max = 6
+        self.plant_max = 4
 
     def animal_count(self):
         return f"This place has {len(self.animals)} animals in it"
 
     def add_animal(self, animal):
         try:
-            if animal.current_speed == 0:
+            if animal.flight_speed > 0:
                 self.animals.append(animal)
             else:
                 raise AttributeError()
 
         except AttributeError:
-            print("Only animals that like stagnant water can be added to the swamp.")
+            print("Animals that don't fly cannot be added to a mountain.")
             input("\n\nPress any key to continue...")
 
     def __str__(self):

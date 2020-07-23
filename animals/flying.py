@@ -1,7 +1,7 @@
 class Flying:
 
     def __init__(self, wing_count=2):
-        self.flight_speed = 0
+        self.flight_speed = 10
         self.wing_count = wing_count
 
     def fly(self):

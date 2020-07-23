@@ -9,7 +9,7 @@ from animals import HawaiianHappyFaceSpider
 from animals import RainbowTrout
 
 
-def release_animal(arboretum):
+def feed_animal(arboretum):
     animal = None
 
     print("1. Gold Dust Day Gecko")
@@ -22,7 +22,7 @@ def release_animal(arboretum):
     print("8. Happy-Face Spider")
     print("9. Rainbow Trout")
 
-    choice = input("Choose animal to release > ")
+    choice = input("Choose animal to feed > ")
 
     if choice == "1":
         animal = GoldDustDayGecko()
@@ -51,32 +51,23 @@ def release_animal(arboretum):
     if choice == "9":
         animal = RainbowTrout()
 
-    # Get all biome lists
-    biomes = [arboretum.rivers, arboretum.coastlines, arboretum.swamps,
-              arboretum.grasslands, arboretum.mountains, arboretum.forests]
+    # convert animal prey set to list
+    options = list(animal.prey)
 
-    # Create empty options list of available biome environments
-    options = []
-
-    # iterate biome lists and add available environments to options list
-    for biome in biomes:
-        for environment in biome:
-            if len(environment.animals) < environment.animal_max:
-                options.append(environment)
-
-    # iterate options list to create menu options
+    # iterate animal prey set to create menu options
     for index, option in enumerate(options):
-        print(f'{index + 1}. {option} ({len(option.animals)} animals)')
+        print(f'{index + 1}. {option}')
 
     # Handle if user has no options
     if len(options) > 0:
-        # prompt user to place animal
-        print("Release the animal into which biome?")
-        choice = input("> ")
+        # prompt user to select food for animal
+        print(f"What is on the menu for the {animal} today?")
+        choice = input(">> ")
         # TODO check input is a valid option
-        # place animal in selected biome list
-        options[int(choice) - 1].add_animal(animal)
+        # feed animal
+        animal.feed(options[int(choice) - 1])
+        input("\n\nPress any key to continue...")
     else:
-        print("No biomes available for this animal.")
-        print("Select a different animal or annex a new biome.")
+        print("No food available for this animal.")
+        print("Select a different animal.")
         input("\n\nPress any key to continue...")
