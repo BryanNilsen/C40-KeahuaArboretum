@@ -6,7 +6,7 @@ from animals import GoldDustDayGecko
 from animals import Opeapea
 from animals import NeneGoose
 from animals import HawaiianHappyFaceSpider
-from animals import RainbowTrout
+# from animals import RainbowTrout
 
 
 def release_animal(arboretum):
@@ -20,7 +20,7 @@ def release_animal(arboretum):
     print("6. 'Ulae")
     print("7. Ope'ape'a")
     print("8. Happy-Face Spider")
-    print("9. Rainbow Trout")
+    # print("9. Rainbow Trout")
 
     choice = input("Choose animal to release > ")
 
@@ -48,8 +48,8 @@ def release_animal(arboretum):
     if choice == "8":
         animal = HawaiianHappyFaceSpider()
 
-    if choice == "9":
-        animal = RainbowTrout()
+    # if choice == "9":
+    #     animal = RainbowTrout()
 
     # Get all biome lists
     biomes = [arboretum.rivers, arboretum.coastlines, arboretum.swamps,

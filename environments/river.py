@@ -14,7 +14,7 @@ class River(Environment):
 
     def add_animal(self, animal):
         try:
-            if animal.aquatic and animal.cell_type == "hypertonic":
+            if animal.aquatic and (animal.cell_type == "hypertonic" or animal.cell_type == "isotonic"):
                 self.animals.append(animal)
             else:
                 raise AttributeError(
