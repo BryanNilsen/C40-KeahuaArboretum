@@ -6,9 +6,7 @@ from .environment import Environment
 class River(Environment):
 
     def __init__(self, name):
-        Environment.__init__(self, name)
-        self.animal_max = 12
-        self.plant_max = 6
+        Environment.__init__(self, name, animal_max=12, plant_max=6)
         self.current_speed = 12
 
     def animal_count(self):

@@ -5,9 +5,7 @@ from animals import Aquatic
 class Forest(Environment):
 
     def __init__(self, name):
-        Environment.__init__(self, name)
-        self.animal_max = 20
-        self.plant_max = 32
+        Environment.__init__(self, name, animal_max=20, plant_max=32)
 
     def animal_count(self):
         return f"This place has {len(self.animals)} animals in it"

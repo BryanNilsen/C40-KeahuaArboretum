@@ -4,9 +4,7 @@ from .environment import Environment
 class Grassland(Environment):
 
     def __init__(self, name):
-        Environment.__init__(self, name)
-        self.animal_max = 22
-        self.plant_max = 15
+        Environment.__init__(self, name, animal_max=22, plant_max=15)
         # self.inhabitants = []
 
     def animal_count(self):
