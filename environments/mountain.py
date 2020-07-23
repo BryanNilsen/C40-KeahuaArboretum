@@ -1,4 +1,5 @@
 from .environment import Environment
+from animals import Flying
 
 
 class Mountain(Environment):
@@ -12,8 +13,15 @@ class Mountain(Environment):
         return f"This place has {len(self.animals)} animals in it"
 
     def add_animal(self, animal):
-        # check for appropriate properties and throw errors
-        self.animals.append(animal)
+        try:
+            if animal.flight_speed > 0:
+                self.animals.append(animal)
+            else:
+                raise AttributeError()
+
+        except AttributeError:
+            print("Animals that don't fly cannot be added to a mountain.")
+            input("\n\nPress any key to continue...")
 
     def __str__(self):
         return f'{self.name}'

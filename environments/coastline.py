@@ -7,6 +7,7 @@ class Coastline(Environment):
         Environment.__init__(self, name)
         self.animal_max = 15
         self.plant_max = 3
+        self.current_speed = 18
 
     def animal_count(self):
         return f"This place has {len(self.animals)} animals in it"

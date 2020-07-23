@@ -7,3 +7,5 @@ from .grassland import Grassland
 from .mountain import Mountain
 from .forest import Forest
 from .coastline import Coastline
+
+# Characteristics

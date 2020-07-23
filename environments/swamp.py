@@ -1,8 +1,5 @@
+from animals import Stagnant
 from .environment import Environment
-# import sys
-# sys.path.append('../')
-
-# from environments import Stagnant
 
 
 class Swamp(Environment):
@@ -11,21 +8,21 @@ class Swamp(Environment):
         Environment.__init__(self, name)
         self.animal_max = 8
         self.plant_max = 12
-        # self.inhabitants = []
+        self.current_speed = 0
 
     def animal_count(self):
         return f"This place has {len(self.animals)} animals in it"
 
     def add_animal(self, animal):
-        # don't add more than capacity
-        if len(self.animals) < self.animal_max:
-            self.animals.append(animal)
-        # throw error if you try
+        try:
+            if animal.current_speed == 0:
+                self.animals.append(animal)
+            else:
+                raise AttributeError()
 
-    # def addInhabitant(self, item):
-        # if not isinstance(item, IStagnant):
-        #     raise TypeError(f"{item} is not of type IStagnant")
-        # self.inhabitants.append(item)
+        except AttributeError:
+            print("Only animals that like stagnant water can be added to the swamp.")
+            input("\n\nPress any key to continue...")
 
     def __str__(self):
         return f'{self.name}'
