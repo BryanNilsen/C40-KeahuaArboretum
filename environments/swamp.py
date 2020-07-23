@@ -5,9 +5,7 @@ from .environment import Environment
 class Swamp(Environment):
 
     def __init__(self, name):
-        Environment.__init__(self, name)
-        self.animal_max = 8
-        self.plant_max = 12
+        Environment.__init__(self, name, animal_max=8, plant_max=12)
         self.current_speed = 0
 
     def animal_count(self):

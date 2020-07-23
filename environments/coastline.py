@@ -4,9 +4,7 @@ from .environment import Environment
 class Coastline(Environment):
 
     def __init__(self, name):
-        Environment.__init__(self, name)
-        self.animal_max = 15
-        self.plant_max = 3
+        Environment.__init__(self, name, animal_max=15, plant_max=3)
         self.current_speed = 18
 
     def animal_count(self):

@@ -5,9 +5,7 @@ from animals import Flying
 class Mountain(Environment):
 
     def __init__(self, name):
-        Environment.__init__(self, name)
-        self.animal_max = 6
-        self.plant_max = 4
+        Environment.__init__(self, name, animal_max=6, plant_max=4)
 
     def animal_count(self):
         return f"This place has {len(self.animals)} animals in it"
