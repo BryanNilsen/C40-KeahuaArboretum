@@ -38,50 +38,47 @@ def feed_animal(arboretum):
                         animals_by_selected_class.append(animal)
 
     if choice == "1":
-        animal = GoldDustDayGecko()
+        find_all_animals_by_class(GoldDustDayGecko)
 
     if choice == "2":
-        animal = RiverDolphin()
         find_all_animals_by_class(RiverDolphin)
-        for item in animals_by_selected_class:
-            print(item)
 
     if choice == "3":
-        animal = NeneGoose()
+        find_all_animals_by_class(NeneGoose)
 
     if choice == "4":
-        animal = Kikakapu()
+        find_all_animals_by_class(Kikakapu)
 
     if choice == "5":
-        animal = Pueo()
+        find_all_animals_by_class(Pueo)
 
     if choice == "6":
-        animal = Ulae()
+        find_all_animals_by_class(Ulae)
 
     if choice == "7":
-        animal = Opeapea()
+        find_all_animals_by_class(Opeapea)
 
     if choice == "8":
-        animal = HawaiianHappyFaceSpider()
+        find_all_animals_by_class(HawaiianHappyFaceSpider)
 
     if choice == "9":
-        animal = RainbowTrout()
+        find_all_animals_by_class(RainbowTrout)
 
+    # GENERATE NUMBERED LIST OF AVAILABLE ANIMALS TO FEED
     for index, animal in enumerate(animals_by_selected_class):
         print(f'{index + 1}. {animal}')
 
+    # PROMPT USER TO SELECT ANIMAL
     print(f"Select an animal to feed >> ")
     choice = input(">> ")
 
-    selected_animal = animals_by_selected_class[int(choice - 1)]
-
-    print(f"What is on the menu for the {selected_animal} today?")
-    choice = input(">> ")
+    # STORE SELECTED ANIMAL
+    selected_animal = animals_by_selected_class[int(choice) - 1]
 
     # convert animal prey set to list
     options = list(selected_animal.prey)
 
-    # iterate animal prey set to create menu options
+    # GENERATE NUMBERED LIST OF FEED OPTIONS
     for index, option in enumerate(options):
         print(f'{index + 1}. {option}')
 
