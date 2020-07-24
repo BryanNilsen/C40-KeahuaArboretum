@@ -1,14 +1,16 @@
 from animals import Animal
 from animals import Flying
 from animals import Terrestrial
+from .attributes import Trees
 
 
-class Pueo(Animal, Terrestrial, Flying):
+class Pueo(Animal, Terrestrial, Flying, Trees):
 
     def __init__(self):
         Animal.__init__(self, "Ulae")
         Terrestrial.__init__(self)
         Flying.__init__(self)
+        Trees.__init__(self)
         self.__prey = {"Rats", "Mice"}
 
     @property

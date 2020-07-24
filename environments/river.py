@@ -1,4 +1,3 @@
-import os
 from animals import Aquatic
 from .environment import Environment
 

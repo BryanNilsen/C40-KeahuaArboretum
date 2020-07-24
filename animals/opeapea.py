@@ -2,15 +2,17 @@ from animals import Animal
 from animals import Terrestrial
 from animals import Flying
 from animals import HighElevation
+from .attributes import Trees
 
 
-class Opeapea(Animal, Terrestrial, Flying, HighElevation):
+class Opeapea(Animal, Terrestrial, Flying, HighElevation, Trees):
 
     def __init__(self):
         Animal.__init__(self, "Ope'ape'a")
         Terrestrial.__init__(self)
         Flying.__init__(self)
         HighElevation.__init__(self)
+        Trees.__init__(self)
         self.__prey = {"Leaves", "Mosquitoes", "Flies"}
 
     @property

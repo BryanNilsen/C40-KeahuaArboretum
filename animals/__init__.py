@@ -1,8 +1,11 @@
 from .identifiable import Identifiable
 from .animal import Animal
-from .attributes import HighElevation
+
 
 # characteristics
+from .attributes import HighElevation
+from .attributes import Sunlight
+
 from .aquatic import Aquatic
 from .freshwater import Freshwater
 from .flying import Flying

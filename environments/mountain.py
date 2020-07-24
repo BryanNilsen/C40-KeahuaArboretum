@@ -12,7 +12,7 @@ class Mountain(Environment):
 
     def add_animal(self, animal):
         try:
-            if animal.min_elevation > 2999:
+            if animal.max_elevation > 2999:
                 self.animals.append(animal)
             else:
                 raise AttributeError()
