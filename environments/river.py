@@ -6,7 +6,6 @@ class River(Environment):
 
     def __init__(self, name):
         Environment.__init__(self, name, animal_max=12, plant_max=6)
-        self.current_speed = 12
 
     def animal_count(self):
         return f"This place has {len(self.animals)} animals in it"

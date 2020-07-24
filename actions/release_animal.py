@@ -74,8 +74,12 @@ def release_animal(arboretum):
         print("Release the animal into which biome?")
         choice = input("> ")
         # TODO check input is a valid option
-        # place animal in selected biome list
-        options[int(choice) - 1].add_animal(animal)
+        if int(choice) > 0 and int(choice) <= len(options) + 1:
+            # place animal in selected biome list
+            options[int(choice) - 1].add_animal(animal)
+        else:
+            print("Invalid Entry")
+            input("\n\nPress any key to continue...")
     else:
         print("No biomes available for this animal.")
         print("Select a different animal or annex a new biome.")
