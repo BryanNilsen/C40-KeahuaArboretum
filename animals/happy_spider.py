@@ -7,7 +7,7 @@ from animals import Stagnant
 class HawaiianHappyFaceSpider(Animal, Terrestrial, Walking, Stagnant):
 
     def __init__(self):
-        Animal.__init__(self, "Hawaiian Happy-Face Spider")
+        Animal.__init__(self, "Hawaiian Happy-Face Spider", release_age=.5)
         Terrestrial.__init__(self)
         Walking.__init__(self)
         Stagnant.__init__(self)

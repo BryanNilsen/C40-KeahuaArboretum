@@ -7,7 +7,7 @@ from animals import Stagnant
 class Kikakapu(Animal, Freshwater, Swimming, Stagnant):
 
     def __init__(self):
-        Animal.__init__(self, "Kīkākapu")
+        Animal.__init__(self, "Kīkākapu", release_age=1)
         Freshwater.__init__(self)
         Swimming.__init__(self)
         Stagnant.__init__(self)

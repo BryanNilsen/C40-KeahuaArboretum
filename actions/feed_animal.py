@@ -6,12 +6,15 @@ from animals import GoldDustDayGecko
 from animals import Opeapea
 from animals import NeneGoose
 from animals import HawaiianHappyFaceSpider
-# from animals import RainbowTrout
+from helpers import print_banner
 
 
 def feed_animal(arboretum):
     animal = None
-
+    print_banner()
+    # MENU
+    print("ANIMAL FEED OPTIONS:")
+    print("")
     print("1. Gold Dust Day Gecko")
     print("2. River Dolphin")
     print("3. Nene Goose")
@@ -20,7 +23,6 @@ def feed_animal(arboretum):
     print("6. 'Ulae")
     print("7. Ope'ape'a")
     print("8. Happy-Face Spider")
-    # print("9. Rainbow Trout")
 
     choice = input("Choose the animal type you want to feed >> ")
 

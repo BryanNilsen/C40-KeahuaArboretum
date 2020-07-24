@@ -8,7 +8,7 @@ from .attributes import Trees
 class Opeapea(Animal, Terrestrial, Flying, HighElevation, Trees):
 
     def __init__(self):
-        Animal.__init__(self, "Ope'ape'a")
+        Animal.__init__(self, "Ope'ape'a", release_age=5)
         Terrestrial.__init__(self)
         Flying.__init__(self)
         HighElevation.__init__(self)

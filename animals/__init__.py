@@ -23,6 +23,5 @@ from .kikakapu import Kikakapu
 from .nene_goose import NeneGoose
 from .opeapea import Opeapea
 from .pueo import Pueo
-from .rainbow_trout import RainbowTrout
 from .river_dolphin import RiverDolphin
 from .ulae import Ulae

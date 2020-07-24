@@ -1,7 +1,17 @@
+from helpers import print_banner
+
+
 def build_facility_report(arboretum):
+
+    print_banner()
+    print(f"KEAHUA ARBORETUM - FACILITY REPORT")
+    print("----------------------------------")
+    print("")
 
     def printEnvironment(env_type, environment):
         print(f'{env_type} - {environment} [{str(environment.id)[:8]}]')
+        if len(environment.animals) > 0:
+            print("  Animals:")
         for animal in environment.animals:
             print(f'     {animal}')
 
