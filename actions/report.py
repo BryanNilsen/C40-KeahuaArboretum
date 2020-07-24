@@ -15,6 +15,11 @@ def build_facility_report(arboretum):
         for animal in environment.animals:
             print(f'     {animal}')
 
+        if len(environment.plants) > 0:
+            print("  Plants:")
+        for plant in environment.plants:
+            print(f'     {plant}')
+
     for river in arboretum.rivers:
         printEnvironment("River", river)
 
