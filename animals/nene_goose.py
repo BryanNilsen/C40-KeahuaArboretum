@@ -1,14 +1,16 @@
 from animals import Animal
 from animals import Terrestrial
 from animals import Flying
+from .attributes import Grass
 
 
-class NeneGoose(Animal, Terrestrial, Flying):
+class NeneGoose(Animal, Terrestrial, Flying, Grass):
 
     def __init__(self):
-        Animal.__init__(self, "Nene Goose")
+        Animal.__init__(self, "Nene Goose", release_age=7)
         Terrestrial.__init__(self)
         Flying.__init__(self)
+        Grass.__init__(self)
         self.__prey = {"Grass"}
 
     @property

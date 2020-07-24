@@ -1,14 +1,17 @@
-import os
 from environments import River
 from environments import Swamp
 from environments import Coastline
 from environments import Grassland
 from environments import Mountain
 from environments import Forest
+from helpers import print_banner
 
 
 def annex_habitat(arboretum):
-    os.system('cls' if os.name == 'nt' else 'clear')
+    print_banner()
+    # MENU OPTIONS
+    print("HABITAT OPTIONS:")
+    print("")
     print("1. River")
     print("2. Swamp")
     print("3. Coastline")
@@ -17,6 +20,7 @@ def annex_habitat(arboretum):
     print("6. Forest")
     print("")
     choice = input("Choose habitat to annex >> ")
+    print("")
 
     if choice == "1":
         name = input("Enter a name for your River >> ")

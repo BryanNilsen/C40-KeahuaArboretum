@@ -1,9 +1,9 @@
-import os
 from arboretum import Arboretum
 from actions.annex import annex_habitat
 from actions.release_animal import release_animal
 from actions.feed_animal import feed_animal
 from actions.report import build_facility_report
+from helpers import print_banner
 
 keahua = Arboretum("Keahua Arboretum", "123 Paukauila Lane")
 
@@ -12,11 +12,10 @@ def build_menu():
     '''
     Title Menu with options list
     '''
-    os.system('cls' if os.name == 'nt' else 'clear')
-    print("+-++-++-++-++-++-++-++-++-++-++-++-++-++-++-++-+")
-    print("|  K  e  h  u  a    A  r  b  o  r  e  t  u  m  |")
-    print("+-++-++-++-++-++-++-++-++-++-++-++-++-++-++-++-+")
+    print_banner()
+    print("MAIN MENU:")
     print("")
+    # MAIN MENU
     print("1. Annex Habitat")
     print("2. Release Animal into Habitat")
     print("3. Feed Animal")
@@ -51,8 +50,10 @@ def main_menu():
     if choice == "5":
         build_facility_report(keahua)
         pass
-    if choice == "6":
-        exit()
+
+    # NOT NEEDED - if user types 6, the code will just end
+    # if choice == "6":
+    #     exit()
 
     if choice != "6":
         main_menu()

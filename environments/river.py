@@ -1,4 +1,3 @@
-import os
 from animals import Aquatic
 from .environment import Environment
 
@@ -7,14 +6,13 @@ class River(Environment):
 
     def __init__(self, name):
         Environment.__init__(self, name, animal_max=12, plant_max=6)
-        self.current_speed = 12
 
     def animal_count(self):
         return f"This place has {len(self.animals)} animals in it"
 
     def add_animal(self, animal):
         try:
-            if animal.aquatic and animal.cell_type == "hypertonic":
+            if animal.aquatic and (animal.cell_type == "hypertonic" or animal.cell_type == "isotonic"):
                 self.animals.append(animal)
             else:
                 raise AttributeError(

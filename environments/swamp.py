@@ -1,4 +1,3 @@
-from animals import Stagnant
 from .environment import Environment
 
 
@@ -6,14 +5,13 @@ class Swamp(Environment):
 
     def __init__(self, name):
         Environment.__init__(self, name, animal_max=8, plant_max=12)
-        self.current_speed = 0
 
     def animal_count(self):
         return f"This place has {len(self.animals)} animals in it"
 
     def add_animal(self, animal):
         try:
-            if animal.current_speed == 0:
+            if animal.stagnant:
                 self.animals.append(animal)
             else:
                 raise AttributeError()

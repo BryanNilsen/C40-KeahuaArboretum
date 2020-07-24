@@ -1,5 +1,5 @@
 from .environment import Environment
-from animals import Flying
+from animals import HighElevation
 
 
 class Mountain(Environment):
@@ -12,13 +12,14 @@ class Mountain(Environment):
 
     def add_animal(self, animal):
         try:
-            if animal.flight_speed > 0:
+            if animal.max_elevation > 2999:
                 self.animals.append(animal)
             else:
                 raise AttributeError()
 
         except AttributeError:
-            print("Animals that don't fly cannot be added to a mountain.")
+            print(
+                "Animals that can't survive at high altitudes cannot be added to a mountain.")
             input("\n\nPress any key to continue...")
 
     def __str__(self):

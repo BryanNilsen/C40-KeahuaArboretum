@@ -1,15 +1,17 @@
 from animals import Animal
-from animals import Saltwater
+from animals import Freshwater
 from animals import Swimming
+from animals import Stagnant
 
 
-class Kikakapu(Animal, Saltwater, Swimming):
+class Kikakapu(Animal, Freshwater, Swimming, Stagnant):
 
     def __init__(self):
-        Animal.__init__(self, "Kīkākapu")
-        Saltwater.__init__(self)
+        Animal.__init__(self, "Kīkākapu", release_age=1)
+        Freshwater.__init__(self)
         Swimming.__init__(self)
-        self.__prey = {"Sea Anenonme", "Worms"}
+        Stagnant.__init__(self)
+        self.__prey = {"Crickets", "Worms", "Mosquitos"}
 
     @property
     def prey(self):
